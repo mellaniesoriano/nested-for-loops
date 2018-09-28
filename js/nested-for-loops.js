@@ -13,10 +13,9 @@ function nestedForLoops(depth, width = depth) {
   for (let i = 0; i < depth; i++) {
     for (let j = 0; j < width; j++) {
       result += `{x:${j}, y:${i}}`
-      if (j < width-1) {
+      if (j < width - 1) {
         result += `, `
-      }
-      if (j === width - 1) {
+      } else if (j === width - 1) {
         result += "\n"
       }
     }
